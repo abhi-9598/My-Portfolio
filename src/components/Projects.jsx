@@ -114,6 +114,7 @@ function Projects() {
       ],
       tech: ['Power BI', 'Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
       links: [
+         { text: 'GitHub', url: 'https://github.com/diksha-tripathi-lpu/employee-performance-insights' },
         { text: 'LinkedIn', url: 'https://www.linkedin.com/posts/abhi--yadav_machinelearning-powerbi-clustering-activity-7350874691957350400-S1nx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcpQrYBKq5mHymi5iLIJkMjMHCj9Uq8YcE' },
       ],
     },
