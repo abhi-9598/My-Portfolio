@@ -1,0 +1,172 @@
+.about {
+  padding: 60px 30px;
+  background: linear-gradient(135deg, var(--bg-secondary, rgba(255, 255, 255, 0.05)) 0%, transparent 100%);
+  color: var(--text-color);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease-out;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: var(--text-h);
+  letter-spacing: 1px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color, #5f54e4) 0%, var(--accent, #64a6ff) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInDown 0.6s ease-out;
+}
+
+@supports (background-clip: text) {
+  .about h2 {
+    color: transparent;
+  }
+}
+
+@supports not (background-clip: text) {
+  .about h2 {
+    color: var(--text-h);
+  }
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text {
+  line-height: 1.9;
+  font-size: 1.05rem;
+  animation: slideInLeft 0.7s ease-out 0.2s backwards;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.about-text p:hover {
+  color: var(--primary-color);
+  background: rgba(100, 150, 255, 0.1);
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  transform: translateX(5px);
+}
+
+.about-highlights {
+  animation: slideInRight 0.7s ease-out 0.3s backwards;
+}
+
+.about-highlights h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.about-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-highlights li {
+  padding: 15px;
+  margin-bottom: 12px;
+  position: relative;
+  color: var(--text-secondary);
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  padding-left: 30px;
+}
+
+.about-highlights li:before {
+  content: "✓";
+  position: absolute;
+  left: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.about-highlights li:hover {
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.2) 0%, rgba(100, 150, 255, 0.1) 100%);
+  border-left-color: var(--primary-color);
+  transform: translateX(8px);
+  box-shadow: 0 6px 20px rgba(100, 150, 255, 0.2);
+  color: var(--text-color);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about {
+    padding: 30px 20px;
+  }
+}

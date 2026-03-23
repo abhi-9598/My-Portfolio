@@ -1,0 +1,175 @@
+.training h2 {
+  font-size: 2.5rem;
+  color: var(--text-h);
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.training {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.training-item {
+  background: linear-gradient(135deg, var(--social-bg) 0%, rgba(255, 255, 255, 0.05) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideInUp 0.6s ease-out backwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.training-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.training-item:hover::before {
+  left: 100%;
+}
+
+.training-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(100, 150, 255, 0.3);
+  border-color: var(--accent);
+}
+
+.training-item h3 {
+  font-size: 1.5rem;
+  color: var(--text-h);
+  margin-bottom: 8px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.training-header h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.proof-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(100, 150, 255, 0.7) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(100, 150, 255, 0.2);
+  white-space: nowrap;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.proof-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(100, 150, 255, 0.4);
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(100, 150, 255, 0.9) 100%);
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+  color: var(--text-h);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  animation: slideInUp 0.7s ease-out;
+}
+
+.training-item ul {
+  margin: 12px 0;
+  padding-left: 20px;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.training-item li {
+  margin-bottom: 8px;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.training-item li:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .training h2 {
+    font-size: 1.8rem;
+  }
+  
+  .training-item {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,122 @@
+.achievements h2 {
+  font-size: 2.5rem;
+  color: var(--text-h);
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.achievements {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.achievements p {
+  background: linear-gradient(135deg, var(--social-bg) 0%, rgba(255, 255, 255, 0.05) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: slideInUp 0.6s ease-out backwards;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.achievements p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.achievements p:hover::before {
+  left: 100%;
+}
+
+.achievements p:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(100, 150, 255, 0.3);
+  border-color: var(--accent);
+}
+
+.achievements a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.achievements a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.achievements a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.achievements a:hover::after {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements h2 {
+    font-size: 1.8rem;
+  }
+  
+  .achievements p {
+    padding: 20px;
+  }
+}

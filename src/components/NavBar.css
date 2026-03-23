@@ -1,0 +1,115 @@
+.navbar {
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(100, 150, 255, 0.05) 100%);
+  border: 1.5px solid var(--accent-border);
+  border-radius: 12px;
+  padding: 15px 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  animation: slideInDown 0.6s ease-out;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+  animation: slideInUp 0.6s ease-out backwards;
+}
+
+.navbar li:nth-child(1) { animation-delay: 0s; }
+.navbar li:nth-child(2) { animation-delay: 0.1s; }
+.navbar li:nth-child(3) { animation-delay: 0.2s; }
+.navbar li:nth-child(4) { animation-delay: 0.3s; }
+.navbar li:nth-child(5) { animation-delay: 0.4s; }
+.navbar li:nth-child(6) { animation-delay: 0.5s; }
+.navbar li:nth-child(7) { animation-delay: 0.6s; }
+
+.navbar a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.navbar a:hover::before {
+  left: 0;
+}
+
+.navbar a:hover {
+  color: var(--text-h);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(100, 150, 255, 0.4);
+}
+
+.navbar a:active {
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+  }
+
+  .navbar ul {
+    justify-content: space-around;
+    gap: 6px;
+  }
+
+  .navbar a {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+}

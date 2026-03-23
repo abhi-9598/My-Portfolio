@@ -1,0 +1,104 @@
+.education h2 {
+  font-size: 2.5rem;
+  color: var(--text-h);
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.education {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.education-item {
+  background: linear-gradient(135deg, var(--social-bg) 0%, rgba(255, 255, 255, 0.05) 100%);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideInUp 0.6s ease-out backwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.education-item:hover::before {
+  left: 100%;
+}
+
+.education-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(100, 150, 255, 0.3);
+  border-color: var(--accent);
+}
+
+.education-item h3 {
+  color: var(--text-h);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  animation: slideInUp 0.7s ease-out;
+}
+
+.education-item p {
+  color: var(--text-secondary, #999);
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .education h2 {
+    font-size: 1.8rem;
+  }
+  
+  .education-item {
+    padding: 20px;
+  }
+}

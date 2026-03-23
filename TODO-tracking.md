@@ -1,0 +1,1 @@
+# GitHub Push Progress&#10;&#10;- [ ] 1. git init&#10;- [ ] 2. git add .&#10;- [ ] 3. git commit -m "Initial commit: My Portfolio React app"&#10;- [ ] 4. git branch -M main&#10;- [ ] 5. git remote add origin https://github.com/abhi-9598/My-Portfolio.git&#10;- [ ] 6. git push -u origin main&#10;&#10;Repo: https://github.com/abhi-9598/My-Portfolio.git
