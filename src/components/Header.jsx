@@ -1,5 +1,7 @@
 import './Header.css'
 import { useState } from 'react'
+import profileImg from '../assets/PresonalPhotoes/1.jpeg'
+
 
 function Header({ darkMode, toggleDarkMode }) {
   const [showCertificates, setShowCertificates] = useState(false)
@@ -15,7 +17,7 @@ function Header({ darkMode, toggleDarkMode }) {
       <div className="header-content">
         <div className="header-grid">
           <div className="header-left">
-            <img src="/src/assets/PresonalPhotoes/1.jpeg" alt="Abhishek Yadav" className="profile-photo" />
+            <img src={profileImg} alt="Abhishek Yadav" className="profile-photo" />
           </div>
           <div className="header-right">
             <h1>Abhishek Yadav</h1>
