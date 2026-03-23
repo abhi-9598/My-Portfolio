@@ -102,6 +102,8 @@
     transform: translateX(0);
   }
 }
+
+.certificate-item h3 {
   color: var(--text-h);
   margin-bottom: 12px;
   font-size: 1.3rem;

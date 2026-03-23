@@ -107,6 +107,8 @@
     transform: translateX(0);
   }
 }
+
+.training-item h3 {
   color: var(--text-h);
   margin-bottom: 12px;
   font-size: 1.3rem;
