@@ -1,5 +1,6 @@
 import './Projects.css'
 import { useState, useEffect } from 'react'
+import { getImagePaths } from '../utils/imageLoader'
 
 function ImageCarousel({ images, projectName }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -59,32 +60,9 @@ function ImageCarousel({ images, projectName }) {
 }
 
 function Projects() {
-  const project1Images = [
-    '/src/assets/Project1/1.png',
-    '/src/assets/Project1/2.png',
-    '/src/assets/Project1/3.png',
-    '/src/assets/Project1/4.png',
-  ]
-
-  const project2Images = [
-    '/src/assets/Project2/1.png',
-    '/src/assets/Project2/2.png',
-    '/src/assets/Project2/3.png',
-    '/src/assets/Project2/4.png',
-    '/src/assets/Project2/5.png',
-  ]
-
-  const project3Images = [
-    '/src/assets/Project3/1.png',
-    '/src/assets/Project3/2.png',
-    '/src/assets/Project3/3.png',
-    '/src/assets/Project3/4.png',
-    '/src/assets/Project3/5.png',
-    '/src/assets/Project3/6.png',
-    '/src/assets/Project3/7.png',
-    '/src/assets/Project3/8.png',
-    '/src/assets/Project3/9.png',
-  ]
+  const project1Images = getImagePaths('Project1')
+  const project2Images = getImagePaths('Project2')
+  const project3Images = getImagePaths('Project3')
 
   const projectsData = [
     {
